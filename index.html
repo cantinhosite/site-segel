@@ -116,6 +116,7 @@ nav a:hover{color:var(--gold)}
 .passo span{color:var(--gold2);font-weight:900;font-size:1.3em;margin-right:6px}
 .caso{background:rgba(255,255,255,.08);border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;margin:24px 0 0}
 .caso b{color:var(--gold)}
+.obr .passos5>div{background:#fff}
 /* faq */
 .faq{display:flex;gap:32px;flex-wrap:wrap;align-items:flex-start}
 .faq .v{flex:0 0 280px;max-width:100%;margin:0 auto}
@@ -172,7 +173,7 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
     </div>
   </div>
   <nav><div class="in">
-    <a href="#servicos">Serviços</a><a href="#padrao">Padrão Segel</a><a href="#como-funciona">Como funciona</a><a href="#obras">Obras</a><a href="#clientes">Clientes</a><a href="#bruno">Quem atende</a><a href="#comercio">Comércios</a><a href="#duvidas">Dúvidas</a><a href="#videos">Vídeos</a><a href="#onde">Onde atendemos</a><a href="#orcamento">Orçamento</a>
+    <a href="#servicos">Serviços</a><a href="#padrao">Padrão Segel</a><a href="#como-funciona">Como funciona</a><a href="#obras">Obras</a><a href="#clientes">Clientes</a><a href="#bruno">Quem atende</a><a href="#comercio">Comércios</a><a href="#obras-reformas">Obra ou reforma</a><a href="#duvidas">Dúvidas</a><a href="#videos">Vídeos</a><a href="#onde">Onde atendemos</a><a href="#orcamento">Orçamento</a>
   </div></nav>
 </header>
 
@@ -304,6 +305,24 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
   </div>
 </section>
 
+<section class="bgsoft obr" id="obras-reformas">
+  <div class="wrap">
+    <h2>Vai construir ou reformar? Essa é a hora certa da segurança.</h2>
+    <p class="sub">Com a obra aberta, o cabo passa por dentro da parede e do forro. Depois do reboco, do forro e da pintura, isso custa quebrar ou fica com fio aparente.</p>
+    <div class="passos">
+      <div class="passo"><b>Proteja a obra desde já</b>Material, ferramenta e fio de cobre somem rápido. Com câmera, você acompanha a obra pelo celular, mesmo longe.</div>
+      <div class="passo"><b>Fio escondido, casa bonita</b>Marcamos os pontos de câmera, sensor e central antes do reboco e do forro. Nada de canaleta ou fio pendurado na casa nova.</div>
+      <div class="passo"><b>Já tem sistema antigo?</b>A reforma é a hora de refazer o que nunca funcionou direito: cerca, concertina, câmeras ou alarme, aproveitando o que ainda presta.</div>
+    </div>
+    <div class="passos5" style="margin-top:22px">
+      <div><span>1</span><b>Mande fotos da obra</b>Pelo WhatsApp, com a fase em que está. Se tiver a planta, melhor ainda.</div>
+      <div><span>2</span><b>Marcamos os pontos</b>Com você e com o seu pedreiro ou eletricista, para o cabo ficar embutido.</div>
+      <div><span>3</span><b>Entrega funcionando</b>No acabamento, instalamos e configuramos tudo, com garantia por escrito.</div>
+    </div>
+    <p class="center"><a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20estou%20em%20obra%2Freforma%20e%20quero%20planejar%20a%20seguran%C3%A7a" target="_blank" rel="noopener">Quero planejar a segurança da minha obra</a></p>
+  </div>
+</section>
+
 <section id="duvidas">
   <div class="wrap">
     <h2>Dúvidas frequentes</h2>
@@ -356,7 +375,7 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
     <p class="sub">Preencha e a mensagem abre pronta no WhatsApp. Depois é só mandar as fotos do local.</p>
     <form class="form" onsubmit="event.preventDefault();var n=this.nome.value,s=this.serv.value,b=this.bairro.value,m=this.msg.value;var t='Olá Bruno, sou '+n+', do bairro '+b+'. Quero orçamento de '+s+'.'+(m?' '+m:'');window.open('https://wa.me/5591991256818?text='+encodeURIComponent(t),'_blank');">
       <label for="nome">Seu nome</label><input id="nome" name="nome" required>
-      <label for="serv">Serviço</label><select id="serv" name="serv"><option>cerca elétrica</option><option>câmeras</option><option>alarme</option><option>cerca elétrica com concertina</option><option>conserto ou manutenção</option></select>
+      <label for="serv">Serviço</label><select id="serv" name="serv"><option>cerca elétrica</option><option>câmeras</option><option>alarme</option><option>cerca elétrica com concertina</option><option>conserto ou manutenção</option><option>obra ou reforma</option></select>
       <label for="bairro">Bairro</label><input id="bairro" name="bairro" required>
       <label for="msg">Algo mais? (opcional)</label><textarea id="msg" name="msg" rows="3"></textarea>
       <button class="btn" type="submit">Enviar pelo WhatsApp</button>
