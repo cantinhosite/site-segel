@@ -163,6 +163,11 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
 .caso-vids figure{margin:0}
 .caso-vids video{width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;display:block}
 .caso-vids figcaption{font-size:.9rem;color:#d6e0ea;text-align:center;margin-top:6px}
+.obra-vids{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.obra-vids figure{margin:0}
+.obra-vids video{width:100%;aspect-ratio:9/16;border-radius:12px;background:#000;display:block}
+.obra-vids figcaption{font-size:.88rem;color:var(--muted);text-align:center;margin-top:6px}
+.obra-vids b{color:var(--navy)}
 </style>
 </head>
 <body>
@@ -242,7 +247,12 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
     <h2>Obra entregue: antes e depois</h2>
     <p class="sub">Casa na Cidade Nova, outubro de 2026.</p>
     <div class="obra">
-      <img src="img/antes-depois.jpg" alt="Antes e depois da fachada com concertina nova e cerca elétrica">
+      <div><img src="img/antes-depois.jpg" alt="Antes e depois da fachada com concertina nova e cerca elétrica">
+      <div class="obra-vids">
+        <figure><video controls playsinline muted preload="none" poster="img/poster-antes-retirando.jpg"><source src="videos/cidade-nova-antes-retirando-concertina.mp4" type="video/mp4"></video><figcaption><b>Antes:</b> retirando a concertina velha</figcaption></figure>
+        <figure><video controls playsinline muted preload="none" poster="img/poster-depois-cerca.jpg"><source src="videos/cidade-nova-depois-cerca-concertina.mp4" type="video/mp4"></video><figcaption><b>Depois:</b> cerca elétrica com concertina, padrão Segel</figcaption></figure>
+      </div>
+      </div>
       <div>
         <h3 style="color:var(--navy)">Concertina velha trocada pelo padrão Segel</h3>
         <ul>
