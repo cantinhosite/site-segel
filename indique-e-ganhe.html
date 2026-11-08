@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Tag do Google (Google Ads AW-18554529510): conta cliques no WhatsApp e na ligação -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18554529510"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18554529510');
+  /* Rótulo da conversão "Contato" (preencher quando vier do Google Ads, ex.: 'AW-18554529510/AbCdEf') */
+  var SEGEL_CONV = '';
+  function segelContato(tipo){
+    gtag('event', 'contato_' + tipo);
+    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('wa.me') > -1) segelContato('whatsapp');
+    else if (h.indexOf('tel:') === 0) segelContato('ligacao');
+  }, true);
+  document.addEventListener('submit', function(){ segelContato('formulario'); }, true);
+</script>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B2A4A">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indique e Ganhe: revisão grátis do seu sistema | Segel, Belém</title>
+<meta name="description" content="Cliente da Segel que indica um amigo e o amigo fecha ganha uma revisão preventiva grátis da cerca elétrica, câmeras ou alarme. Gere seu link e mande pelo WhatsApp. Conjunto Satélite, Belém-PA.">
+<link rel="canonical" href="https://segel.com.br/indique-e-ganhe.html">
+<meta property="og:title" content="Indique a Segel e ganhe uma revisão grátis do seu sistema">
+<meta property="og:description" content="Seu indicado fechou? A revisão completa do seu sistema fica por conta da Segel. Atendimento direto com o Bruno, Belém-PA.">
+<meta property="og:image" content="https://segel.com.br/img/manutencao.jpg">
+<style>
+:root{--navy:#0B2A4A;--navy2:#143c6e;--gold:#ffc400;--gold2:#d9a400;--green:#25D366;--ink:#1b1f24;--muted:#5b6672;--bg:#f5f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+section{padding:52px 0}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}
+h2{font-size:clamp(1.4rem,3.3vw,1.9rem);color:var(--navy);text-align:center}
+.sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 28px}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:14px 24px;border-radius:30px;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,.35);border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.sec{background:#fff;color:var(--navy);border:2px solid var(--navy);box-shadow:none}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;max-width:1080px;margin:0 auto}
+.logo{font-weight:900;font-size:1.35rem;letter-spacing:.5px;text-decoration:none}
+.logo b{color:var(--gold)}
+.logo small{display:block;font-size:.62rem;font-weight:500;letter-spacing:1.5px;color:#cfd8e3}
+.top .acts{display:flex;gap:8px}
+.top .acts a{font-size:.9rem;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:20px;background:rgba(255,255,255,.12)}
+.top .acts a.w{background:var(--green)}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:56px 0 50px}
+.hero .in{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;align-items:center}
+.hero .tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.8rem,4.6vw,2.6rem)}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.08rem;color:#e6edf5;margin:0 0 22px}
+.premio{background:#fff;color:var(--ink);border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.25);border-top:6px solid var(--gold)}
+.premio h3{color:var(--navy);font-size:1.15rem}
+.premio ul{margin:0;padding:0;list-style:none}
+.premio li{padding:7px 0 7px 26px;position:relative;border-bottom:1px solid #eef1f5;font-size:.96rem}
+.premio li::before{content:"✓";position:absolute;left:0;color:var(--gold2);font-weight:900}
+@media(max-width:760px){.hero .in{grid-template-columns:1fr}}
+.indicado{display:none;background:var(--gold);color:var(--navy);padding:18px 0;text-align:center}
+.indicado b{font-size:1.1rem}
+.indicado .btn{margin-top:10px}
+.passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.passos>div{background:var(--bg);border-radius:14px;padding:20px}
+.passos span{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:900;align-items:center;justify-content:center;margin-bottom:10px}
+.passos b{display:block;color:var(--navy);margin-bottom:4px}
+.painel{background:var(--navy);color:#fff}
+.painel h2{color:#fff}.painel .sub{color:#d6e0ea}
+.box{max-width:620px;margin:0 auto;background:#fff;color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.box label{display:block;font-weight:700;color:var(--navy);margin:0 0 6px}
+.box input{width:100%;padding:13px;border:1px solid #cfd8e3;border-radius:10px;font:inherit}
+.box .acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.box .acoes .btn{flex:1 1 220px;text-align:center}
+.prev{background:var(--bg);border-left:4px solid var(--green);border-radius:8px;padding:12px 14px;margin-top:16px;font-size:.93rem;white-space:pre-line;display:none}
+.ok{color:#1e7e34;font-weight:700;margin-top:8px;min-height:1.4em;font-size:.93rem}
+.ja{font-size:.93rem;color:var(--muted);margin:18px 0 0;text-align:center}
+.ja a{color:var(--navy2);font-weight:700}
+.regras{max-width:720px;margin:0 auto}
+.regras li{margin-bottom:8px}
+.bgsoft{background:var(--bg)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.rev{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(11,42,74,.10);display:flex;flex-direction:column}
+.rev iframe{width:100%;aspect-ratio:9/16;border:0;background:#000;display:block}
+.rev img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.rev .b{padding:14px 16px 18px}
+.rev h3{color:var(--navy);font-size:1.05rem;margin-bottom:6px}
+.rev p{margin:0;color:var(--muted);font-size:.94rem}
+.rev .pill{display:inline-block;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.rev.vaga{border:2px dashed #c9d3de;box-shadow:none;background:transparent;justify-content:center;text-align:center;padding:26px}
+.priv{max-width:720px;margin:22px auto 0;font-size:.9rem;color:var(--muted);text-align:center}
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#d6e0ea;max-width:640px;margin:0 auto 22px}
+.voltar{display:inline-block;margin-top:18px;color:var(--gold);font-weight:700;text-decoration:none}
+footer{background:#0e1e3a;color:#cfd8e3;padding:30px 0 100px;font-size:.93rem}
+footer a{color:var(--gold);text-decoration:none;font-weight:600}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:8px;padding:10px;background:rgba(11,42,74,.97)}
+.barra a{flex:1;text-align:center;padding:12px;border-radius:24px;font-weight:800;text-decoration:none;color:#fff;background:rgba(255,255,255,.14)}
+.barra a.w{background:var(--green)}
+@media(max-width:760px){.barra{display:flex}.top .acts{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="logo" href="/">SEG<b>EL</b><small>SISTEMAS DE SEGURANÇA</small></a>
+    <div class="acts">
+      <a href="tel:+5591991256818">📞 Ligar</a>
+      <a class="w" id="wa-topo" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20vim%20pela%20p%C3%A1gina%20Indique%20e%20Ganhe" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- Aparece só para quem abriu o link de indicação (?de=Nome) -->
+<div class="indicado" id="indicado">
+  <div class="wrap">
+    <b>Você foi indicado(a) por <span id="nome-indicou"></span>. Seja bem-vindo(a) à Segel!</b><br>
+    Cliente indicado tem prioridade na agenda. Mande uma foto do local pelo WhatsApp e receba o orçamento sem custo.<br>
+    <a class="btn" id="wa-indicado" href="https://wa.me/5591991256818" target="_blank" rel="noopener">Pedir meu orçamento</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap in">
+    <div>
+      <span class="tag">Indique e Ganhe • clientes Segel</span>
+      <h1>Indicou e o amigo fechou? <span>A revisão do seu sistema é por nossa conta.</span></h1>
+      <p>Quem já tem cerca elétrica, câmeras ou alarme da Segel conhece o nosso cuidado. Indique para um amigo, vizinho ou comércio do bairro: se ele fechar, você ganha uma revisão preventiva completa, grátis.</p>
+      <a class="btn" href="#painel">Gerar meu link de indicação</a>
+    </div>
+    <div class="premio">
+      <h3>O que vem na sua revisão grátis</h3>
+      <ul>
+        <li>Teste completo de cerca, câmeras ou alarme</li>
+        <li>Limpeza e ajuste do que precisar</li>
+        <li>Conferência da bateria da central</li>
+        <li>Conferência da gravação e do aplicativo no celular</li>
+        <li>Supervisão do Bruno e relatório do que encontramos</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="sub">Simples para você, que não tem tempo a perder.</p>
+    <div class="passos">
+      <div><span>1</span><b>Gere seu link</b>Coloque seu nome aqui embaixo. O site monta a mensagem pronta.</div>
+      <div><span>2</span><b>Mande pelo WhatsApp</b>Para quem precisa de segurança: amigo, vizinho, parente, dono de comércio.</div>
+      <div><span>3</span><b>Seu indicado fala com o Bruno</b>Ele abre o link, já aparece que foi você quem indicou, e ele tem prioridade na agenda.</div>
+      <div><span>4</span><b>Fechou? Você ganha</b>Quando o indicado paga a entrada, a gente agenda a sua revisão grátis.</div>
+    </div>
+  </div>
+</section>
+
+<section class="painel" id="painel">
+  <div class="wrap">
+    <h2>Seu painel de indicação</h2>
+    <p class="sub">Leva 10 segundos. Nada fica salvo no site: a mensagem só sai do seu celular para quem você escolher.</p>
+    <div class="box">
+      <label for="nome">Seu nome (como o Bruno te conhece)</label>
+      <input id="nome" maxlength="40" placeholder="Ex.: Maria do Satélite" autocomplete="given-name">
+      <div class="prev" id="prev"></div>
+      <div class="acoes">
+        <a class="btn" id="enviar" href="#" target="_blank" rel="noopener">Mandar pelo WhatsApp</a>
+        <button class="btn sec" id="copiar" type="button">Copiar mensagem</button>
+      </div>
+      <div class="ok" id="ok"></div>
+      <p class="ja">Já indicou alguém? <a id="avisar" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20indiquei%20uma%20pessoa%20para%20a%20Segel" target="_blank" rel="noopener">Avise o Bruno pelo WhatsApp</a> para ele anotar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap regras">
+    <h2>Regras claras</h2>
+    <ul>
+      <li>Vale para quem <b>já é cliente da Segel</b> e tem sistema instalado ou revisado por nós.</li>
+      <li>A revisão grátis é liberada quando o indicado <b>fecha o serviço e paga a entrada</b>.</li>
+      <li>Indicou 2 ou mais que fecharam? Além da revisão, ganha <b>10% na próxima manutenção ou ampliação</b>.</li>
+      <li>Quem é indicado tem <b>prioridade na agenda</b>. O preço é o mesmo de sempre: aqui a gente não compete por preço, compete por qualidade.</li>
+      <li>A revisão é agendada em dia útil, conforme a agenda, e vale para o sistema do endereço de quem indicou.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bgsoft" id="revisoes">
+  <div class="wrap">
+    <h2>Revisões realizadas</h2>
+    <p class="sub">Cuidar do sistema depois da entrega faz parte do Padrão Segel. Aqui mostramos algumas revisões, sempre com autorização do cliente.</p>
+    <div class="revs">
+      <div class="rev">
+        <iframe src="https://www.youtube.com/embed/AW3mWPkj86w" title="Revisão de cerca elétrica com concertina no telhado" loading="lazy" allowfullscreen></iframe>
+        <div class="b"><span class="pill">Cerca elétrica + concertina</span><h3>Revisão no telhado de cliente antigo</h3><p>Cerca instalada pela Segel em 2024. Testamos o choque, o alarme e a fixação: nenhum defeito até hoje.</p></div>
+      </div>
+      <!-- MODELO para a próxima revisão autorizada (copiar e preencher):
+      <div class="rev">
+        <img src="img/NOME-DA-FOTO.jpg" alt="Descrição da foto" loading="lazy">
+        <div class="b"><span class="pill">Câmeras</span><h3>Título curto</h3><p>O que foi feito, em 1 ou 2 frases. Só primeiro nome do cliente, se ele quiser.</p></div>
+      </div>
+      -->
+      <div class="rev vaga">
+        <h3>A próxima pode ser a sua</h3>
+        <p>Indique um amigo e, quando ele fechar, a revisão do seu sistema é por nossa conta. Se quiser, mostramos aqui como ficou.</p>
+      </div>
+    </div>
+    <p class="priv">🔒 Sua segurança vem primeiro: só publicamos com a sua autorização, e nunca mostramos endereço, número da casa, placa de carro, rosto ou o ponto exato das câmeras.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Ainda não é cliente?</h2>
+    <p>Mande uma foto do local pelo WhatsApp e receba o orçamento sem custo. Atendimento direto com o Bruno, instalação com a supervisão dele e garantia por escrito.</p>
+    <a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a><br>
+    <a class="voltar" href="/">← Voltar para o site da Segel</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b style="color:#fff">Segel Sistemas de Segurança</b><br>Conjunto Satélite, Trav. WE 7, nº 235 B, Coqueiro, Belém-PA • (91) 99125-6818<br>
+    Seg a sex 8h às 18h • sáb 8h às 12h<br>
+    <a href="https://g.page/r/Cf5Dn7mbFta2EBM/review" target="_blank" rel="noopener">★ Avalie a Segel no Google</a>
+  </div>
+</footer>
+
+<div class="barra">
+  <a href="tel:+5591991256818">📞 Ligar</a>
+  <a class="w" id="wa-barra" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20vim%20pela%20p%C3%A1gina%20Indique%20e%20Ganhe" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var SITE = 'https://segel.com.br/indique-e-ganhe.html';
+  var FONE = '5591991256818';
+  function limpa(s){ return (s||'').replace(/[<>"]/g,'').replace(/\s+/g,' ').trim().slice(0,40); }
+
+  /* 1) Quem chegou pelo link de alguém */
+  var de = limpa(new URLSearchParams(location.search).get('de'));
+  if (de) {
+    document.getElementById('nome-indicou').textContent = de;
+    document.getElementById('indicado').style.display = 'block';
+    var t = 'Olá Bruno, fui indicado(a) por ' + de + ' e quero um orçamento.';
+    var url = 'https://wa.me/' + FONE + '?text=' + encodeURIComponent(t);
+    ['wa-indicado','wa-topo','wa-barra'].forEach(function(id){ document.getElementById(id).href = url; });
+  }
+
+  /* 2) Painel de quem indica */
+  var inp = document.getElementById('nome'), prev = document.getElementById('prev'),
+      env = document.getElementById('enviar'), cop = document.getElementById('copiar'),
+      ok = document.getElementById('ok'), avisar = document.getElementById('avisar');
+  /* compartilhar usa api.whatsapp.com para não contar como contato no Google Ads */
+  function msg(){
+    var n = limpa(inp.value);
+    var link = n ? SITE + '?de=' + encodeURIComponent(n) : SITE;
+    return 'Indico a Segel Sistemas de Segurança' + (n ? ', que cuida do sistema aqui de casa' : '') +
+      '. Atendimento direto com o dono, o Bruno, serviço caprichado e com garantia por escrito. ' +
+      'Cerca elétrica, câmeras e alarme. Orçamento pelo WhatsApp com foto, sem custo.\n\n' +
+      (n ? 'Abre por este link que já aparece que fui eu que indiquei:\n' : '') + link;
+  }
+  function atualiza(){
+    var n = limpa(inp.value), m = msg();
+    prev.textContent = m; prev.style.display = n ? 'block' : 'none';
+    env.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(m);
+    avisar.href = 'https://wa.me/' + FONE + '?text=' + encodeURIComponent('Olá Bruno, aqui é ' + (n || '___') + '. Indiquei uma pessoa para a Segel: ');
+    ok.textContent = '';
+  }
+  env.addEventListener('click', function(e){ if (!limpa(inp.value)) { e.preventDefault(); ok.textContent = 'Coloque seu nome primeiro, para o Bruno saber que foi você.'; ok.style.color='#b00020'; inp.focus(); } else { ok.style.color=''; } });
+  cop.addEventListener('click', function(){
+    if (!limpa(inp.value)) { ok.textContent = 'Coloque seu nome primeiro.'; ok.style.color='#b00020'; inp.focus(); return; }
+    ok.style.color='';
+    var m = msg();
+    if (navigator.clipboard) navigator.clipboard.writeText(m).then(function(){ ok.textContent = 'Mensagem copiada! Agora é só colar no WhatsApp.'; });
+    else { prev.style.display='block'; ok.textContent = 'Selecione o texto acima e copie.'; }
+  });
+  inp.addEventListener('input', atualiza);
+  atualiza();
+})();
+</script>
+</body>
+</html>
