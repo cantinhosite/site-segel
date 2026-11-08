@@ -84,6 +84,12 @@ header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
 .ok{color:#1e7e34;font-weight:700;margin-top:8px;min-height:1.4em;font-size:.93rem}
 .ja{font-size:.93rem;color:var(--muted);margin:18px 0 0;text-align:center}
 .ja a{color:var(--navy2);font-weight:700}
+.site{max-width:620px;margin:18px auto 0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:20px;text-align:center}
+.site b{color:var(--gold);font-size:1.08rem}
+.site p{margin:6px 0 14px;color:#d6e0ea;font-size:.95rem}
+.links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.links a{background:#fff;color:var(--navy);text-decoration:none;font-weight:700;font-size:.9rem;padding:9px 14px;border-radius:20px}
+.links a.sug{background:var(--gold)}
 .regras{max-width:720px;margin:0 auto}
 .regras li{margin-bottom:8px}
 .bgsoft{background:var(--bg)}
@@ -176,7 +182,15 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
         <button class="btn sec" id="copiar" type="button">Copiar mensagem</button>
       </div>
       <div class="ok" id="ok"></div>
-      <p class="ja">Já indicou alguém? <a id="avisar" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20indiquei%20uma%20pessoa%20para%20a%20Segel" target="_blank" rel="noopener">Avise o Bruno pelo WhatsApp</a> para ele anotar.</p>
+      <p class="ja">Já indicou alguém? <a id="avisar" href="https://api.whatsapp.com/send?phone=5591991256818&amp;text=Ol%C3%A1%20Bruno%2C%20indiquei%20uma%20pessoa%20para%20a%20Segel" target="_blank" rel="noopener">Avise o Bruno pelo WhatsApp</a> para ele anotar.</p>
+    </div>
+    <div class="site">
+      <b>Aproveite para ver nosso site e nos ajudar a melhorar</b>
+      <p>Veja os nossos serviços, obras entregues e vídeos. Achou algo que podia ser melhor? Conte pra gente, sua opinião vale muito.</p>
+      <div class="links">
+        <a href="/#servicos">Serviços</a><a href="/#obras">Obras entregues</a><a href="/#clientes">Clientes</a><a href="/#videos">Vídeos</a><a href="/#duvidas">Dúvidas</a>
+        <a class="sug" href="https://api.whatsapp.com/send?phone=5591991256818&amp;text=Ol%C3%A1%20Bruno%2C%20vi%20o%20site%20da%20Segel%20e%20tenho%20uma%20sugest%C3%A3o%3A%20" target="_blank" rel="noopener">💬 Dar uma sugestão</a>
+      </div>
     </div>
   </div>
 </section>
@@ -260,7 +274,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
   var inp = document.getElementById('nome'), prev = document.getElementById('prev'),
       env = document.getElementById('enviar'), cop = document.getElementById('copiar'),
       ok = document.getElementById('ok'), avisar = document.getElementById('avisar');
-  /* compartilhar usa api.whatsapp.com para não contar como contato no Google Ads */
+  /* compartilhar, avisar e sugestão usam api.whatsapp.com para não contar como contato (orçamento) no Google Ads */
   function msg(){
     var n = limpa(inp.value);
     var link = n ? SITE + '?de=' + encodeURIComponent(n) : SITE;
@@ -273,7 +287,7 @@ footer a{color:var(--gold);text-decoration:none;font-weight:600}
     var n = limpa(inp.value), m = msg();
     prev.textContent = m; prev.style.display = n ? 'block' : 'none';
     env.href = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(m);
-    avisar.href = 'https://wa.me/' + FONE + '?text=' + encodeURIComponent('Olá Bruno, aqui é ' + (n || '___') + '. Indiquei uma pessoa para a Segel: ');
+    avisar.href = 'https://api.whatsapp.com/send?phone=' + FONE + '&text=' + encodeURIComponent('Olá Bruno, aqui é ' + (n || '___') + '. Indiquei uma pessoa para a Segel: ');
     ok.textContent = '';
   }
   env.addEventListener('click', function(e){ if (!limpa(inp.value)) { e.preventDefault(); ok.textContent = 'Coloque seu nome primeiro, para o Bruno saber que foi você.'; ok.style.color='#b00020'; inp.focus(); } else { ok.style.color=''; } });
