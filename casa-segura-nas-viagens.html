@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Tag do Google (Google Ads AW-18554529510): conta cliques no WhatsApp e na ligação -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18554529510"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18554529510');
+  /* Rótulo da conversão "Contato" (preencher quando vier do Google Ads, ex.: 'AW-18554529510/AbCdEf') */
+  var SEGEL_CONV = '';
+  function segelContato(tipo){
+    gtag('event', 'contato_' + tipo);
+    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('wa.me') > -1) segelContato('whatsapp');
+    else if (h.indexOf('tel:') === 0) segelContato('ligacao');
+  }, true);
+  document.addEventListener('submit', function(){ segelContato('formulario'); }, true);
+</script>
 <meta charset="utf-8">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0B2A4A">
