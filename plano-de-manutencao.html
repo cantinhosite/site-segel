@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Tag do Google (Google Ads AW-18554529510): conta cliques no WhatsApp e na ligação -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18554529510"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18554529510');
+  /* Rótulo da conversão "Contato" (preencher quando vier do Google Ads, ex.: 'AW-18554529510/AbCdEf') */
+  var SEGEL_CONV = '';
+  function segelContato(tipo){
+    gtag('event', 'contato_' + tipo);
+    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('wa.me') > -1) segelContato('whatsapp');
+    else if (h.indexOf('tel:') === 0) segelContato('ligacao');
+  }, true);
+  document.addEventListener('submit', function(){ segelContato('formulario'); }, true);
+</script>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B2A4A">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plano Segel Cuida: manutenção mensal de câmeras, cerca elétrica e alarme | Belém</title>
+<meta name="description" content="Manutenção preventiva com mensalidade para câmeras, cerca elétrica e alarme: 2 revisões por ano, prioridade no atendimento e visita de chamado sem taxa. Segel, Conjunto Satélite, Belém-PA.">
+<link rel="canonical" href="https://segel.com.br/plano-de-manutencao.html">
+<meta property="og:title" content="Plano Segel Cuida: seu sistema de segurança sempre funcionando">
+<meta property="og:description" content="2 revisões por ano, prioridade no atendimento e visita de chamado sem taxa. Câmeras, cerca elétrica e alarme. Segel, Belém.">
+<meta property="og:image" content="https://segel.com.br/img/manutencao.jpg">
+<style>
+:root{--navy:#0B2A4A;--navy2:#143c6e;--gold:#ffc400;--gold2:#d9a400;--green:#25D366;--ink:#1b1f24;--muted:#5b6672;--bg:#f5f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+section{padding:48px 0}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}
+h2{font-size:clamp(1.4rem,3.3vw,1.9rem);color:var(--navy)}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:14px 24px;border-radius:30px;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,.35)}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;max-width:1080px;margin:0 auto}
+.logo{font-weight:900;font-size:1.35rem;letter-spacing:.5px;text-decoration:none}
+.logo b{color:var(--gold)}
+.logo small{display:block;font-size:.62rem;font-weight:500;letter-spacing:1.5px;color:#cfd8e3}
+.top .acts{display:flex;gap:8px}
+.top .acts a{font-size:.9rem;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:20px;background:rgba(255,255,255,.12)}
+.top .acts a.w{background:var(--green)}
+.hero{background:var(--navy);color:#fff;padding:56px 0 48px}
+.hero .tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.8rem,4.6vw,2.7rem)}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.1rem;color:#e6edf5;margin:0 0 24px}
+.prazo{background:var(--bg);border-left:5px solid var(--gold);border-radius:10px;padding:18px 20px}
+.prazo b{color:var(--navy)}
+.prazo ul{margin:8px 0 0;padding-left:20px}
+ol.dicas{padding:0;margin:0;list-style:none;counter-reset:d}
+ol.dicas li{counter-increment:d;position:relative;padding:14px 0 14px 52px;border-bottom:1px solid #e3e8ee}
+ol.dicas li::before{content:counter(d);position:absolute;left:0;top:12px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:900;display:flex;align-items:center;justify-content:center}
+ol.dicas b{color:var(--navy)}
+.bgsoft{background:var(--bg)}
+.servs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(11,42,74,.10);display:flex;flex-direction:column}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card .b{padding:14px 16px 18px}
+.card h3{color:var(--navy);font-size:1.08rem}
+.card p{color:var(--muted);margin:0}
+.card .pill{display:inline-block;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#d6e0ea;max-width:640px;margin:0 auto 22px}
+.voltar{display:inline-block;margin-top:18px;color:var(--gold);font-weight:700;text-decoration:none}
+footer{background:#0e1e3a;color:#cfd8e3;padding:30px 0 100px;font-size:.93rem}
+footer a{color:var(--gold);text-decoration:none;font-weight:600}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:8px;padding:10px;background:rgba(11,42,74,.97)}
+.barra a{flex:1;text-align:center;padding:12px;border-radius:24px;font-weight:800;text-decoration:none;color:#fff;background:rgba(255,255,255,.14)}
+.barra a.w{background:var(--green)}
+@media(max-width:760px){.barra{display:flex}.top .acts{display:none}}
+.inclui{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.inclui div{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 4px 16px rgba(11,42,74,.08)}
+.inclui b{display:block;color:var(--navy);margin-bottom:4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="logo" href="/">SEG<b>EL</b><small>SISTEMAS DE SEGURANÇA</small></a>
+    <div class="acts">
+      <a href="tel:+5591991256818">📞 Ligar</a>
+      <a class="w" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20Plano%20Segel%20Cuida%20(manuten%C3%A7%C3%A3o%20mensal)" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Manutenção mensal • Belém-PA</span>
+    <h1>Plano Segel Cuida: <span>seu sistema funcionando o ano todo.</span></h1>
+    <p>Câmera que para de gravar, cerca que não dispara, alarme com bateria fraca. Quase sempre ninguém percebe, até o dia em que precisa. No Plano Segel Cuida a gente revisa antes de dar problema, e você paga um valor pequeno por mês, sem susto.</p>
+    <a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20Plano%20Segel%20Cuida%20(manuten%C3%A7%C3%A3o%20mensal)" target="_blank" rel="noopener">Quero saber o valor para o meu sistema</a>
+  </div>
+</section>
+
+<section class="bgsoft">
+  <div class="wrap">
+    <h2>O que está incluído</h2>
+    <div class="inclui">
+      <div><b>2 revisões preventivas por ano</b>Uma a cada 6 meses, com teste completo e vídeo do teste no seu WhatsApp.</div>
+      <div><b>Prioridade na agenda</b>Deu problema? Quem tem o plano é atendido primeiro.</div>
+      <div><b>Visita de chamado sem taxa</b>Você não paga a visita. Se precisar trocar alguma peça, ela sai com desconto e você aprova antes.</div>
+      <div><b>Lembretes e orientação</b>Bateria, ajuste de câmera, aplicativo no celular: a gente avisa e explica.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Para quem é</h2>
+    <div class="servs">
+      <div class="card"><img src="img/cameras-monitor.jpg" alt="Câmeras de segurança instaladas pela Segel" loading="lazy"><div class="b"><h3>Câmeras</h3><p>Limpeza das lentes, ajuste dos ângulos, conferência da gravação, do HD e do acesso pelo celular.</p></div></div>
+      <div class="card"><img src="img/cerca.jpg" alt="Cerca elétrica instalada pela Segel" loading="lazy"><div class="b"><h3>Cerca elétrica</h3><p>Teste de choque e de disparo, fios, isoladores, bateria do eletrificador e galhos encostando.</p></div></div>
+      <div class="card"><img src="img/alarme.jpg" alt="Alarme instalado pela Segel" loading="lazy"><div class="b"><h3>Alarme</h3><p>Sensores, sirene, bateria da central e aviso no celular.</p></div></div>
+      <div class="card"><img src="img/manutencao.jpg" alt="Monitoramento de câmeras em comércio" loading="lazy"><div class="b"><span class="pill">Ideal para comércios</span><h3>Lojas e empresas</h3><p>Para quem não pode ficar nem um dia sem câmera gravando.</p></div></div>
+    </div>
+    <p>Já tem sistema instalado por outra empresa? Também atendemos: primeiro fazemos uma revisão para deixar tudo funcionando e, a partir daí, o sistema entra no plano.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Quanto custa?</h2>
+    <p>Depende do que você tem: quantas câmeras, cerca, alarme. Mande no WhatsApp o que tem instalado (uma foto já ajuda) e o Bruno te passa o valor mensal na hora. Pagamento por Pix, todo mês.</p>
+    <a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20Plano%20Segel%20Cuida%20(manuten%C3%A7%C3%A3o%20mensal)" target="_blank" rel="noopener">Pedir o valor no WhatsApp</a><br>
+    <a class="voltar" href="/">← Voltar para o site da Segel</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Segel Sistemas de Segurança</b><br>Conjunto Satélite, Trav. WE 7, nº 235 B, Coqueiro, Belém-PA • (91) 99125-6818<br>
+    <a href="https://g.page/r/Cf5Dn7mbFta2EBM" target="_blank" rel="noopener">Ver as avaliações no Google</a>
+  </div>
+</footer>
+
+<div class="barra">
+  <a href="tel:+5591991256818">📞 Ligar</a>
+  <a class="w" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20Plano%20Segel%20Cuida%20(manuten%C3%A7%C3%A3o%20mensal)" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</body>
+</html>
