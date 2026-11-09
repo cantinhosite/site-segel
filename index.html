@@ -43,6 +43,8 @@
 <style>
 :root{--navy:#0B2A4A;--navy2:#143c6e;--gold:#ffc400;--gold2:#d9a400;--green:#25D366;--ink:#1b1f24;--muted:#5b6672;--bg:#f5f7fa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
+/* links diretos (#bloco): o título não fica escondido atrás do topo fixo */
+[id]{scroll-margin-top:var(--topo,120px)}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -241,10 +243,10 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
     <h2>O que a Segel faz</h2>
     <p class="sub">Para casa, apartamento e comércio. Também consertamos e refazemos sistemas que outras empresas instalaram e nunca funcionaram direito.</p>
     <div class="servs">
-      <div class="card"><img src="img/cerca.jpg" alt="Fachada com cerca elétrica no alto do muro e placa de aviso"><div class="b"><span class="pill">Mais procurado</span><h3>Cerca elétrica</h3><p>Dá o choque e dispara o alarme quando mexem. Com central, bateria, placas de aviso e controle pelo celular.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20cerca%20el%C3%A9trica" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
-      <div class="card"><img src="img/cameras-monitor.jpg" alt="Monitor mostrando as imagens das câmeras instaladas pela Segel"><div class="b"><h3>Câmeras de segurança</h3><p>Imagem nítida de dia e de noite, gravação e acesso pelo celular. Explicamos o aplicativo com calma na entrega.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20c%C3%A2meras" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
-      <div class="card"><img src="img/alarme.jpg" alt="Notificação de disparo do alarme no celular"><div class="b"><h3>Alarme</h3><p>Sensores e central configurados para não disparar à toa, com aviso no celular quando alguém entra.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20alarme" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
-      <div class="card"><img src="img/concertina.jpg" alt="Concertina e hastes de cerca elétrica no alto do muro"><div class="b"><h3>Concertina</h3><p>Barreira de aço galvanizado que aguenta a chuva de Belém. Junto com a cerca: uma segura, a outra avisa.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20cerca%20com%20concertina" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
+      <div class="card" id="cerca"><img src="img/cerca.jpg" alt="Fachada com cerca elétrica no alto do muro e placa de aviso"><div class="b"><span class="pill">Mais procurado</span><h3>Cerca elétrica</h3><p>Dá o choque e dispara o alarme quando mexem. Com central, bateria, placas de aviso e controle pelo celular.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20cerca%20el%C3%A9trica" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
+      <div class="card" id="cameras"><img src="img/cameras-monitor.jpg" alt="Monitor mostrando as imagens das câmeras instaladas pela Segel"><div class="b"><h3>Câmeras de segurança</h3><p>Imagem nítida de dia e de noite, gravação e acesso pelo celular. Explicamos o aplicativo com calma na entrega.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20c%C3%A2meras" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
+      <div class="card" id="alarme"><img src="img/alarme.jpg" alt="Notificação de disparo do alarme no celular"><div class="b"><h3>Alarme</h3><p>Sensores e central configurados para não disparar à toa, com aviso no celular quando alguém entra.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20alarme" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
+      <div class="card" id="concertina"><img src="img/concertina.jpg" alt="Concertina e hastes de cerca elétrica no alto do muro"><div class="b"><h3>Concertina</h3><p>Barreira de aço galvanizado que aguenta a chuva de Belém. Junto com a cerca: uma segura, a outra avisa.</p><a href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20quero%20or%C3%A7amento%20de%20cerca%20com%20concertina" target="_blank" rel="noopener">Pedir orçamento →</a></div></div>
     </div>
   </div>
 </section>
@@ -477,5 +479,6 @@ footer .redes a{margin-right:14px;display:inline-block;margin-bottom:6px}
   <a href="tel:+5591991256818">📞 Ligar</a>
   <a class="w" href="https://wa.me/5591991256818?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener">WhatsApp</a>
 </div>
+<script>(function(){var h=document.querySelector("header");function f(){document.documentElement.style.setProperty("--topo",(h.offsetHeight+10)+"px")}f();addEventListener("resize",f)})();</script>
 </body>
 </html>
