@@ -9,10 +9,10 @@
   gtag('js', new Date());
   gtag('config', 'AW-18554529510');
   /* Rótulo da conversão "Contato" (preencher quando vier do Google Ads, ex.: 'AW-18554529510/AbCdEf') */
-  var SEGEL_CONV = '';
+  var SEGEL_CONV = 'AW-18554529510/NtreCJ3cyrQdEObNvo9F';
   function segelContato(tipo){
     gtag('event', 'contato_' + tipo);
-    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV});
+    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV, 'value': 1.0, 'currency': 'BRL'});
   }
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href]');
