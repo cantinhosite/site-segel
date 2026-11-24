@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Tag do Google (Google Ads AW-18554529510): conta cliques no WhatsApp e na ligação -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18554529510"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18554529510');
+  /* Rótulo da conversão "Contato" (preencher quando vier do Google Ads, ex.: 'AW-18554529510/AbCdEf') */
+  var SEGEL_CONV = 'AW-18554529510/NtreCJ3cyrQdEObNvo9F';
+  function segelContato(tipo){
+    gtag('event', 'contato_' + tipo);
+    if (SEGEL_CONV) gtag('event', 'conversion', {'send_to': SEGEL_CONV, 'value': 1.0, 'currency': 'BRL'});
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('wa.me') > -1) segelContato('whatsapp');
+    else if (h.indexOf('tel:') === 0) segelContato('ligacao');
+  }, true);
+  document.addEventListener('submit', function(){ segelContato('formulario'); }, true);
+</script>
+<meta charset="utf-8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0B2A4A">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monitoramento 24h de alarme e câmeras para comércio e quem viaja | Segel Belém</title>
+<meta name="description" content="Central 24h confere as câmeras quando o alarme dispara, liga para você e aciona a polícia. Para comércio fechado à noite, quem viaja e idoso que mora sozinho. Segel, Conjunto Satélite, Belém-PA.">
+<link rel="canonical" href="https://segel.com.br/monitoramento-24h.html">
+<meta property="og:title" content="Monitoramento 24h: alguém de olho quando você não pode atender">
+<meta property="og:description" content="Alarme disparou de madrugada? A central confere as câmeras, liga para você e aciona a polícia. Segel, Belém.">
+<meta property="og:image" content="https://segel.com.br/img/manutencao.jpg">
+<title>Plano Segel Cuida: manutenção mensal de câmeras, cerca elétrica e alarme | Belém</title>
+<meta name="description" content="Manutenção preventiva com mensalidade para câmeras, cerca elétrica e alarme: 2 revisões por ano, prioridade no atendimento e visita de chamado sem taxa. Segel, Conjunto Satélite, Belém-PA.">
+<link rel="canonical" href="https://segel.com.br/plano-de-manutencao.html">
+<meta property="og:title" content="Plano Segel Cuida: seu sistema de segurança sempre funcionando">
+<meta property="og:description" content="2 revisões por ano, prioridade no atendimento e visita de chamado sem taxa. Câmeras, cerca elétrica e alarme. Segel, Belém.">
+<meta property="og:image" content="https://segel.com.br/img/manutencao.jpg">
+<style>
+:root{--navy:#0B2A4A;--navy2:#143c6e;--gold:#ffc400;--gold2:#d9a400;--green:#25D366;--ink:#1b1f24;--muted:#5b6672;--bg:#f5f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px}
+section{padding:48px 0}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}
+h2{font-size:clamp(1.4rem,3.3vw,1.9rem);color:var(--navy)}
+.btn{display:inline-block;background:var(--green);color:#fff;font-weight:700;padding:14px 24px;border-radius:30px;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,.35)}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;max-width:1080px;margin:0 auto}
+.logo{font-weight:900;font-size:1.35rem;letter-spacing:.5px;text-decoration:none}
+.logo b{color:var(--gold)}
+.logo small{display:block;font-size:.62rem;font-weight:500;letter-spacing:1.5px;color:#cfd8e3}
+.top .acts{display:flex;gap:8px}
+.top .acts a{font-size:.9rem;font-weight:700;text-decoration:none;padding:8px 14px;border-radius:20px;background:rgba(255,255,255,.12)}
+.top .acts a.w{background:var(--green)}
+.hero{background:var(--navy);color:#fff;padding:56px 0 48px}
+.hero .tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:800;font-size:.8rem;padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.8rem,4.6vw,2.7rem)}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:1.1rem;color:#e6edf5;margin:0 0 24px}
+.prazo{background:var(--bg);border-left:5px solid var(--gold);border-radius:10px;padding:18px 20px}
+.prazo b{color:var(--navy)}
+.prazo ul{margin:8px 0 0;padding-left:20px}
+ol.dicas{padding:0;margin:0;list-style:none;counter-reset:d}
+ol.dicas li{counter-increment:d;position:relative;padding:14px 0 14px 52px;border-bottom:1px solid #e3e8ee}
+ol.dicas li::before{content:counter(d);position:absolute;left:0;top:12px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:900;display:flex;align-items:center;justify-content:center}
+ol.dicas b{color:var(--navy)}
+.bgsoft{background:var(--bg)}
+.servs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(11,42,74,.10);display:flex;flex-direction:column}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card .b{padding:14px 16px 18px}
+.card h3{color:var(--navy);font-size:1.08rem}
+.card p{color:var(--muted);margin:0}
+.card .pill{display:inline-block;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#d6e0ea;max-width:640px;margin:0 auto 22px}
+.voltar{display:inline-block;margin-top:18px;color:var(--gold);font-weight:700;text-decoration:none}
+footer{background:#0e1e3a;color:#cfd8e3;padding:30px 0 100px;font-size:.93rem}
+footer a{color:var(--gold);text-decoration:none;font-weight:600}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;gap:8px;padding:10px;background:rgba(11,42,74,.97)}
+.barra a{flex:1;text-align:center;padding:12px;border-radius:24px;font-weight:800;text-decoration:none;color:#fff;background:rgba(255,255,255,.14)}
+.barra a.w{background:var(--green)}
+@media(max-width:760px){.barra{display:flex}.top .acts{display:none}}
+.inclui{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.inclui div{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 4px 16px rgba(11,42,74,.08)}
+.inclui b{display:block;color:var(--navy);margin-bottom:4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <a class="logo" href="/">SEG<b>EL</b><small>SISTEMAS DE SEGURANÇA</small></a>
+    <div class="acts">
+      <a href="tel:+5591991256818">📞 Ligar</a>
+      <a class="w" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20monitoramento%2024h" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Monitoramento 24h • Belém-PA</span>
+    <h1>Quando você não pode atender, <span>alguém está de olho.</span></h1>
+    <p>O alarme avisa no seu celular. Mas e se for de madrugada, se você estiver viajando ou com a loja fechada? No monitoramento 24h, uma central confere as câmeras na hora do disparo, liga para você e aciona a polícia.</p>
+    <a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20monitoramento%2024h" target="_blank" rel="noopener">Ver se vale para o meu caso</a>
+  </div>
+</section>
+
+<section class="bgsoft">
+  <div class="wrap">
+    <h2>Para quem faz sentido</h2>
+    <div class="inclui">
+      <div><b>Comércio fechado à noite</b>Loja, depósito ou escritório que fica vazio fora do horário.</div>
+      <div><b>Quem viaja</b>Férias, trabalho fora, fim de ano: a casa não fica sem ninguém de olho.</div>
+      <div><b>Idoso que mora sozinho</b>Para o filho que mora longe ficar tranquilo.</div>
+      <div><b>Casa vazia ou de veraneio</b>Imóvel que passa dias sem ninguém.</div>
+    </div>
+    <p style="margin-top:18px">Se você sempre atende o celular quando o alarme dispara, talvez nem precise: o aviso no app já resolve. A gente te fala com sinceridade.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <ol class="dicas">
+      <li><b>Instalação com supervisão do Bruno:</b> alarme e câmeras ligados à central de monitoramento (aproveitamos o que você já tem, se for compatível).</li>
+      <li><b>Disparou:</b> a central recebe o aviso e confere as câmeras em tempo real.</li>
+      <li><b>Situação suspeita:</b> liga para você e para os contatos que você escolheu, e aciona a polícia.</li>
+      <li><b>Pelo app:</b> você arma, desarma e vê as câmeras do celular.</li>
+    </ol>
+    <div class="prazo" style="margin-top:22px"><b>Para ficar claro:</b> o monitoramento não inclui viatura ou vigilante indo ao local. Ele confere as imagens, avisa você e chama a polícia.</div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Quanto custa?</h2>
+    <p>Depende do que vai ser monitorado: só o alarme ou também algumas câmeras. Conte no WhatsApp o que você tem (uma foto já ajuda) e o Bruno te diz se vale a pena e o valor mensal.</p>
+    <a class="btn" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20monitoramento%2024h" target="_blank" rel="noopener">Falar com o Bruno no WhatsApp</a><br>
+    <a class="voltar" href="/">← Voltar para o site da Segel</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Segel Sistemas de Segurança</b><br>Conjunto Satélite, Trav. WE 7, nº 235 B, Coqueiro, Belém-PA • (91) 99125-6818<br>
+    <a href="https://g.page/r/Cf5Dn7mbFta2EBM" target="_blank" rel="noopener">Ver as avaliações no Google</a>
+  </div>
+</footer>
+
+<div class="barra">
+  <a href="tel:+5591991256818">📞 Ligar</a>
+  <a class="w" href="https://wa.me/5591991256818?text=Ol%C3%A1%20Bruno%2C%20quero%20saber%20do%20monitoramento%2024h" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</body>
+</html>
